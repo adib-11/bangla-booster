@@ -12,6 +12,11 @@ const customJestConfig = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@shared/(.*)$': '<rootDir>/../../packages/shared/src/$1',
+    // Mock next-auth modules for API route tests
+    '^next-auth$': '<rootDir>/src/__mocks__/next-auth.ts',
+    '^next-auth/next$': '<rootDir>/src/__mocks__/next-auth-next.ts',
+    '^next-auth/jwt$': '<rootDir>/src/__mocks__/next-auth-jwt.ts',
+    '^next-auth/providers/credentials$': '<rootDir>/src/__mocks__/next-auth-providers-credentials.ts',
   },
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',

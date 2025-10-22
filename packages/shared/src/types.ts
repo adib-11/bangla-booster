@@ -51,6 +51,20 @@ export interface CreateProductRequest {
   imageUrl: string;
 }
 
+// Product form input (client-side form data with File object)
+export interface ProductInput {
+  title: string;
+  price: string;
+  image: File | null;
+}
+
+// Product form validation errors
+export interface ProductFormErrors {
+  title?: string;
+  price?: string;
+  image?: string;
+}
+
 // Owner signup request
 export interface SignupRequest {
   email: string;

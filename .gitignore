@@ -43,3 +43,10 @@ next-env.d.ts
 
 # Misc
 .turbo
+
+# Documentation (not needed in production)
+docs/
+.bmad-core/
+
+# Build artifacts
+*.tsbuildinfo
