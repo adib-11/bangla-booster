@@ -1,7 +1,0 @@
-{
-  "name": "@ai-chat/shared",
-  "version": "1.0.0",
-  "main": "src/types.ts",
-  "types": "src/types.ts",
-  "private": true
-}

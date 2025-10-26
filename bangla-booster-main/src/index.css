@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Brand Colors - Warm & Trustworthy */
+    --primary: 222 47% 11%;           /* Slate-900: Deep, professional */
+    --primary-foreground: 0 0% 100%;   /* White */
+    
+    /* Accent - Warm Amber (use sparingly for CTAs) */
+    --accent: 38 92% 50%;              /* Amber-500: Energetic, warm */
+    --accent-foreground: 222 47% 11%;  /* Slate-900 text on amber */
+    
+    /* Backgrounds - Soft, not stark */
+    --background: 240 5% 98%;          /* Zinc-50: Soft off-white */
+    --foreground: 222 47% 11%;         /* Slate-900 */
+    
+    --card: 0 0% 100%;                 /* White cards */
+    --card-foreground: 222 47% 11%;    /* Slate-900 */
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Secondary - Muted interactions */
+    --secondary: 240 5% 96%;           /* Slate-100 */
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted - Subtle backgrounds */
+    --muted: 240 5% 96%;               /* Slate-100 */
+    --muted-foreground: 215 19% 35%;   /* Slate-600 */
+    
+    /* Borders - Soft, barely-there */
+    --border: 214 32% 91%;             /* Slate-200 */
+    --input: 214 32% 91%;              /* Slate-200 */
+    --ring: 38 92% 50%;                /* Amber-500 for focus rings */
+    
+    /* Functional Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 160 84% 39%;            /* Emerald-600 */
+    --warning: 38 92% 50%;             /* Amber-600 */
+    
+    --radius: 0.5rem;                  /* 8px - subtle, not round */
+    
+    --sidebar-background: 240 5% 96%;
+    --sidebar-foreground: 215 19% 35%;
+    --sidebar-primary: 222 47% 11%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 38 92% 50%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 98%;
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 38 92% 50%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 38 92% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter Variable', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv11', 'ss01';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
